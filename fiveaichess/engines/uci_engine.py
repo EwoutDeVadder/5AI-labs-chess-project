@@ -3,7 +3,7 @@ import chess
 from fiveaichess.agents.agent import Agent
 
 
-class UCIEngineWrapper():
+class UCIEngine():
     
     def __init__(self, agent: Agent) -> None:
         self.agent = agent
