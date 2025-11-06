@@ -48,6 +48,8 @@ uciok
 
 The framework includes base classes and example implementations for **Agents**, **Utilities**, and **Engines**.
 
+> **Note:** The provided example implementation is intentionally simple and naïve. Your task in this lab is to improve it with the techniques discussed in class and by looking into state-of-the-art solution to this problem.
+
 ### Agents
 
 An Agent encapsulates the decision-making logic used to search the game tree and select moves during gameplay. This is the appropriate location to implement search algorithms such as minimax or alpha-beta pruning. During search, the agent queries a Utility to obtain an evaluation score for each game state, and uses these evaluations to determine which move to play according to the selected search strategy.
@@ -58,10 +60,7 @@ A Utility is responsible for assigning heuristic values to board positions. A ut
 
 ### Engines
 
-The Engine layer enables interaction with UCI-compatible graphical user interfaces or other software. The `uci_engine.py` module provides a UCI protocol implementation and _generally does not require modification_. The `example_engine.py` module demonstrates how to construct a UCIEngine by combining custom Agent and Utility classes.
-
-> **Note:** The provided example implementation is intentionally simple and naïve. Your task in this lab is to improve it with the techniques discussed in class and by looking into state-of-the-art solution to this problem.
-
+An Engine wraps an Agent and enables interaction with UCI-compatible graphical user interfaces or other software. The `uci_engine.py` module provides a UCI protocol implementation and _generally does not require modification_. The `example_engine.py` module demonstrates how to construct a UCIEngine by combining custom Agent and Utility classes.
 
 ## Examples
 
@@ -75,11 +74,13 @@ The `scripts` folder contains example scripts that show how to use the framework
 | `replay_pgn.py` | Reads PGN files and replays recorded chess games |
 
 
-> Note: `play_engine.py` uses the `UCI_ENGINE_PATH` environment variable to locate the engine.
+> **Note:** `play_engine.py` uses the `UCI_ENGINE_PATH` environment variable to locate the engine.
 
 ## Stockfish
 
-[Stockfish](https://stockfishchess.org) is a free and open-source chess engine and has been one of the best chess engines in the world for several years. Download and install it from the official website and set the `UCI_ENGINE_PATH` environment variable to the Stockfish binary.
+[Stockfish](https://stockfishchess.org) is a free and open-source chess engine and is among the strongest chess engines in the world today.
+
+Download and install it from the official website and set `UCI_ENGINE_PATH` to the binary:
 
 **Windows**
 
@@ -95,7 +96,7 @@ export UCI_ENGINE_PATH=/path/to/stockfish/binary
 
 ## Chess GUI
 
-You can play against your own egine (or see it in action against other engines) with any UCI-compatible graphical user interface.
+You can play against your own egine (or see it in action against other engines) with any UCI-compatible GUI.
 
 As an example, we provide instructions for the [Arena GUI](http://www.playwitharena.de):
 
