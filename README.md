@@ -1,8 +1,8 @@
 # 5AI Labs: Chess Project
 
-In this lab session you will build a learning chess agent
+In this lab you will build an artificially intelligent chess agent.
 
-This repository provides a light-weight framework built on top of `python-chess`, which implements the chess logic. The framework hides some of the quirky details of this library and implements the Universal Chess Interface (UCI), an open communication protocol that enables chess engines to communicate with user interfaces and other software.
+This repository provides a light-weight framework built on top of `python-chess`, which implements the core chess logic. The framework hides some of the quirky details of this library and implements the Universal Chess Interface (UCI), an open communication protocol that enables chess engines to communicate with user interfaces and other software.
 
 Follow the instructions below to install, run, and extend the framework.
 
