@@ -2,7 +2,7 @@
 
 In this lab you will build an artificially intelligent chess agent.
 
-This repository provides a light-weight framework built on top of `python-chess`, which implements the core chess logic. The framework hides some of the quirky details of this library and implements the Universal Chess Interface (UCI), an open communication protocol that enables chess engines to communicate with user interfaces and other software.
+This repository provides a light-weight framework built on top of `python-chess`, which implements the core chess logic. The framework hides the quirky details of this library and implements the Universal Chess Interface (UCI), an open communication protocol that enables chess engines to communicate with user interfaces and other software.
 
 Follow the instructions below to install, run, and extend the framework.
 
@@ -10,31 +10,31 @@ Follow the instructions below to install, run, and extend the framework.
 
 Make sure your virtual environment is active if you use one.
 
-To ensure the `fiveaichess` package from your project folder can be discovered from anywhere on your system, install it in **editable mode** by running the following command from the project root folder:
+To ensure the `fiveaichess` package from your project folder can be discovered from anywhere on your system, install it in **editable mode** by running the following command from your project root folder:
 
 ```bash
 pip install -e .
 ```
 
-This will automatically install the `python-chess` library. You can also install it manually:
+This will automatically install the `python-chess` package. You can also install it manually:
 
 ```bash
 pip install python-chess
 ```
 
-Or use the `requirements.txt` if you have more dependencies in your project:
+Or use `requirements.txt` if you have more dependencies in your project:
 
 ```bash
 pip install -r requirements.txt
 ```
 
-Once the `fiveaichess` package is installed, you can run your chess engine using `run_engine.bat` (on Windows) and `run_engine.sh` (on Linux). These scripts wrap the following command:
+Once installed, you can run your chess engine using `run_engine.bat` (Windows) and `run_engine.sh` (Linux). These scripts wrap the following command:
 
 ```bash
 python -m fiveaichess.engines.example_engine
 ```
 
-Verify the installation by running the engine with one of the scripts above and typing the command `uci` in the console.
+Verify the installation by running the engine and typing the command `uci` in the console.
 
 The engine should respond with:
 
