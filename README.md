@@ -28,7 +28,7 @@ Or use `requirements.txt` if you have more dependencies in your project:
 pip install -r requirements.txt
 ```
 
-Once installed, you can run your chess engine using `run_engine.bat` (Windows) and `run_engine.sh` (Linux). These scripts wrap the following command:
+Once installed, you can run your chess engine using `fiveaichess.bat` (Windows) and `fiveaichess.sh` (Linux). These scripts wrap the following command:
 
 ```bash
 python -m fiveaichess.engines.example_engine
@@ -103,7 +103,7 @@ As an example, we provide instructions for the [Arena GUI](http://www.playwithar
 - Download and install the software from the official website
 - Make sure your virtual environment is active
 - Open Arena and click on Engines > Install New Engine
-- Navigate to your project folder and select `run_engine.bat` (Windows) or `run_engine.sh` (Linux)
+- Navigate to your project folder and select `fiveaichess.bat` (Windows) or `fiveaichess.sh` (Linux)
 - Choose UCI when prompted for the type of engine
 - Start a new game via File > New and play against your own agent
 
