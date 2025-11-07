@@ -18,9 +18,6 @@ class UCIEngine():
         while True:
             input_val = input().split(' ')
 
-            print(input_val)
-            print(self.options)
-
             match input_val:
 
                 case ['uci']:
