@@ -32,11 +32,11 @@ def play_other_engine(uci_engine_path: str, time_limit: float = 5.0):
         if turn_white_player:
             move = white_player.calculate_move(board)
             turn_white_player = False
-            print(f'{white_player.name} plays {move}')
+            print(f"{white_player.name} plays {move}")
         else:
             move = black_player.play(board, limit).move
             turn_white_player = True
-            print(f'{black_player.id['name']} plays {move}')
+            print(f"{black_player.id['name']} plays {move}")
 
         board.push(move)
         print(board)

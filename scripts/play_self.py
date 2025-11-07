@@ -40,24 +40,24 @@ def play_self():
         if board.is_checkmate():
             running = False
             if turn_white_player:
-                print(f'{black_player.name} wins!')
+                print(f"{black_player.name} wins!")
             else:
-                print(f'{white_player.name} wins!')
+                print(f"{white_player.name} wins!")
 
         # check for draws
         if board.is_stalemate():
             running = False
-            print("Draw by stalemate")
+            print('Draw by stalemate')
         elif board.is_insufficient_material():
             running = False
-            print("Draw by insufficient material")
+            print('Draw by insufficient material')
         elif board.is_fivefold_repetition():
             running = False
-            print("Draw by fivefold repitition!")
+            print('Draw by fivefold repitition!')
         elif board.is_seventyfive_moves():
             running = False
-            print("Draw by 75-moves rule")
+            print('Draw by 75-moves rule')
         
 
-if __name__ == "__main__":
+if __name__ == '__main__':
     play_self()
