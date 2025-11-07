@@ -84,8 +84,8 @@ Download it from the official website, unzip the files and set `UCI_ENGINE_PATH`
 
 **Windows**
 
-```bash
-set STOCKFISH_PATH=C:\path\to\stockfish\binary
+```powershell
+set UCI_ENGINE_PATH C:\path\to\stockfish\binary
 ```
 
 **Linux**
