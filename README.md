@@ -80,7 +80,7 @@ The `scripts` folder contains example scripts that show how to use the framework
 
 [Stockfish](https://stockfishchess.org) is a free and open-source chess engine and is among the strongest chess engines in the world today.
 
-Download and install it from the official website and set `UCI_ENGINE_PATH` to the binary:
+Download it from the official website, unzip the files and set `UCI_ENGINE_PATH` to the binary:
 
 **Windows**
 
@@ -100,7 +100,7 @@ You can play against your own egine (or see it in action against other engines) 
 
 As an example, we provide instructions for the [Arena GUI](http://www.playwitharena.de):
 
-- Download and install the software from the official website
+- Download it from the official website and unzip the files
 - Make sure your virtual environment is active
 - Open Arena and click on Engines > Install New Engine
 - Navigate to your project folder and select `fiveaichess.bat` (Windows) or `fiveaichess.sh` (Linux)
