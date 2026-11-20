@@ -34,6 +34,8 @@ Once installed, you can run your chess engine using `fiveaichess.bat` (Windows) 
 python -m fiveaichess.engines.example_engine
 ```
 
+> **Note**: On Linux, make sure your script is executable with `chmod +x fiveaichess.sh`
+
 Verify the installation by running the engine and typing the command `uci` in the console.
 
 The engine should respond with:
@@ -98,14 +100,64 @@ export UCI_ENGINE_PATH=/path/to/stockfish/binary
 
 You can play against your own egine (or see it in action against other engines) with any UCI-compatible GUI.
 
-As an example, we provide instructions for the [Arena GUI](http://www.playwitharena.de):
+We recommend [En Croissant](https://encroissant.org), a free and open-source chess GUI.
 
-- Download it from the official website and unzip the files
-- Make sure your virtual environment is active
-- Open Arena and click on Engines > Install New Engine
-- Navigate to your project folder and select `fiveaichess.bat` (Windows) or `fiveaichess.sh` (Linux)
-- Choose UCI when prompted for the type of engine
-- Start a new game via File > New and play against your own agent
+Follow the [Getting Started](https://encroissant.org/docs/getting-started) guide to install the application. See [Configure Engines](https://encroissant.org/docs/guides/configure-engines) for more information on how to set up chess engines.
 
+### Adding your own engine
+
+En Croissant's engine selection dialog expects an executable file. It does not allow to register your engine using the provided `fiveaichess.bat` (Windows) or `fiveaichess.sh` (Linux) scripts. Therefore you should manually edit `engines.json` to set up your engine:
+
+- Run En Croissant at least once, then close it before manually modifying the configuration
+- Open `engines.json` at the following location (unless you have configured a custom engines directory):
+
+**Windows**
+
+```text
+%APPDATA%\org.encroissant.app\engines\engines.json
+```
+
+**Linux**
+
+```text
+~/.local/share/org.encroissant.app/engines/engines.json
+```
+
+- Add an engine entry to the JSON array, keeping any existing entries.
+
+**Windows**
+
+```json
+{
+  "type": "local",
+  "id": "8f9cb50e-1cb6-4e57-a73b-a48a75f214d9",
+  "name": "5AIChessAgent",
+  "version": "1.0",
+  "path": "C:\\path\\to\\chess-project\\fiveaichess.bat",
+  "loaded": true,
+  "settings": []
+}
+```
+
+**Linux**
+
+```json
+{
+  "type": "local",
+  "id": "8f9cb50e-1cb6-4e57-a73b-a48a75f214d9",
+  "name": "5AIChessAgent",
+  "version": "1.0",
+  "path": "/home/user/chess-project/fiveaichess.sh",
+  "loaded": true,
+  "settings": []
+}
+```
+
+- Replace `path` with the absolute path to your script and use a unique `id` (UUID v4) for each engine. 
+- Save the file, restart En Croissant, and select your engine to play or analyze a game
+
+> **Note**: On Windows, backslashes must be escaped (`\\`) in JSON.
+
+> **Note**: The GUI does not have an option to set the Python interpreter. The app will run `fiveaichess.bat` (Windows) or `fiveaichess.sh` (Linux) as provided. If you use a virtual environment, adapt the script to use the Python interpreter from your virtual environment (e.g. `.venv/bin/python`) instead of the system-wide Python interpreter (e.g. `python`). This ensures the dependencies installled in your environment can be imported.
 
 **Have fun building your chess AI!**
