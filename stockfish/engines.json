@@ -1,0 +1,30 @@
+[
+    {
+        "type": "local",
+        "id": "2ae3e383-c2c1-4386-803a-7ee9cd997f2a",
+        "name": "Stockfish 19",
+        "version": "",
+        "path": "C:\\SCHOOL\\Semester 5\\AI\\5AI-labs-chess-project\\stockfish\\stockfish\\stockfish-windows-x86-64-universal.exe",
+        "image": null,
+        "elo": 1320,
+        "loaded": true,
+        "settings": [
+            {
+                "name": "Threads",
+                "value": 1
+            },
+            {
+                "name": "Hash",
+                "value": 16
+            },
+            {
+                "name": "MultiPV",
+                "value": 1
+            },
+            {
+                "name": "UCI_Elo",
+                "value": 3190
+            }
+        ]
+    }
+]
